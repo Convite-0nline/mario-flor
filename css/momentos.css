@@ -7,7 +7,7 @@
 }
 
 body{
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 a{
     text-decoration: none;
@@ -28,7 +28,7 @@ header nav a{
     color: #eee;
     margin-right: 5px;
     padding: 5px 10px;
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 12px;
     transition: 0.2s;
     font-weight: 500;
@@ -45,7 +45,7 @@ header nav a.active, header nav a:hover{
     width:100vw ;
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     margin-top: -50px;
 }
 .slider .list .item{
@@ -65,7 +65,7 @@ header nav a.active, header nav a:hover{
     width: 1140px;
     max-width: 80%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
@@ -92,7 +92,7 @@ header nav a.active, header nav a:hover{
     border: none;
     background-color: #eee;
     padding: 7px 15px;
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     cursor: pointer;
     letter-spacing: 2px;
@@ -203,7 +203,7 @@ header nav a.active, header nav a:hover{
     bottom: 50px;
     left: 50%;
     border-radius: 30px;
-    animation: showImage 0.5s linear 1 forwards
+    animation: showImage 0.5s linear 1 forwards;
 
 }
 
@@ -231,7 +231,7 @@ header nav a.active, header nav a:hover{
     }
 }
 .slider.next .thumbnail{
-    animation: effecNext .5s linear 1 forwards;
+    animation: effecNext 0.5s linear 1 forwards;
 }
 @keyframes effecNext{
    from{
@@ -247,7 +247,7 @@ header nav a.active, header nav a:hover{
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: outFrame 0.5 liner 1 forwards
+    animation: outFrame 0.5s linear 1 forwards;
 }
 
 @keyframes outFrame{
@@ -265,10 +265,10 @@ header nav a.active, header nav a:hover{
     opacity: 0;
     animation: showThumbnail 0.5s linear 1 forwards;
 }
-.slider .prev .item:nth-child(1) .content .title,
-.slider .prev .item:nth-child(1) .content .type,
-.slider .prev .item:nth-child(1) .content .description,
-.slider .prev .item:nth-child(1) .content .button{
+.slider.prev .item:nth-child(1) .content .title,
+.slider.prev .item:nth-child(1) .content .type,
+.slider.prev .item:nth-child(1) .content .description,
+.slider.prev .item:nth-child(1) .content .button{
     
     animation: contentOut 0.5s linear 1 forwards;
 }
