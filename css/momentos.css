@@ -280,3 +280,11 @@ header nav a.active, header nav a:hover{
     }
 }
 
+@media screen and (max-width: 678px){
+    .slider .list .item .content{
+        padding-right: 0;
+    }
+    .slider .list .item .content .title{
+        font-size: 30px;
+    }
+}
