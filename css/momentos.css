@@ -21,6 +21,24 @@ header{
     align-items: center;
     position: relative;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+button span{
+    color: #000;
+}
+.netflix-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.icon-netflix{
+    display: flex;
+}
+header .netflix-top .img-netflix img{
+    width: 150px;
+    
 }
 
 header a{
