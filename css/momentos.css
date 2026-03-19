@@ -128,3 +128,155 @@ header nav a.active, header nav a:hover{
     box-shadow: 5px 0 15px rgba(0, 0,0,0.3);
     
 }
+
+/* nextPrevArrows section*/
+.nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nextPrevArrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #14ff72cb;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ;
+}
+.nextPrevArrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+/*Animation part*/
+.slider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+        
+       }
+
+}
+.slider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s;
+}
+.slider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s;
+}
+.slider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s;
+}
+.slider .list .item:nth-child(1) .content .button{
+    animation-delay: 1s;
+}
+
+
+
+/*animation for next button clink*/
+.slider.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards
+
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+.slider.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+
+}
+.slider.prev .list .item img{
+    z-index: 100;
+
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.slider.next .thumbnail{
+    animation: effecNext .5s linear 1 forwards;
+}
+@keyframes effecNext{
+   from{
+    transform: translateX(150px);
+
+   }
+}
+
+.slider.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+.slider.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.5 liner 1 forwards
+}
+
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        bottom: 50px;
+        left: 50%;
+    }
+
+}
+.slider.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+.slider .prev .item:nth-child(1) .content .title,
+.slider .prev .item:nth-child(1) .content .type,
+.slider .prev .item:nth-child(1) .content .description,
+.slider .prev .item:nth-child(1) .content .button{
+    
+    animation: contentOut 0.5s linear 1 forwards;
+}
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
