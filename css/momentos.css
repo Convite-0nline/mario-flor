@@ -49,12 +49,12 @@ header a{
 }
 
 a.active{
-    background: #14ff72cb;
+    background: #ff1414;
     border-radius: 2px;
 }
 
 header a:hover{
-    background: #14ff72cb;
+    background: #ff1414cb;
     border-radius: 2px;
 }
 
@@ -99,11 +99,11 @@ header a:hover{
     line-height: 1.3em;
 }
 .slider .list .item .type{
-    color: #14ff72cb;
+    color: #ff1414cb;
 }
 .slider .list .item .button{
     display: grid;
-    grid-template-columns: repeat(2, 130px);
+    grid-template-columns: repeat(1, 130px);
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
@@ -175,7 +175,7 @@ header a:hover{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
+    background-color: #ff1414cb;
     border: none;
     color: #fff;
     font-family: monospace;
