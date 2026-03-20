@@ -43,3 +43,25 @@ function moveSlider(direction) {
         }
     }, {once: true}) // Remove the event listener after it's triggered once
 }
+
+const audio = document.querySelector('#audio');
+const botoes = document.querySelectorAll('.audioNetflix');
+
+botoes.forEach((botao) => {
+    botao.addEventListener('click', () => {
+
+        if (audio.paused) {
+            audio.play();
+
+            // TODOS viram PAUSE
+            botoes.forEach(b => b.innerHTML = 'PAUSE ||');
+
+        } else {
+            audio.pause();
+
+            // TODOS viram PLAY
+            botoes.forEach(b => b.innerHTML = 'PLAY ▶');
+        }
+
+    });
+});
