@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +22,7 @@ body{
     margin-bottom: 60px;
     
     width: 80%;
+    max-width: 600px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -95,11 +100,12 @@ body{
 
 .tempo-juntos{
     width: 85%;
+    max-width: 600px;
     height: 500px;
     background-color: rgb(40, 40, 40);
     display: flex;
     flex-direction: column;
-    border-radius: 20px 20px 5px 5px;
+    border-radius: 20px 20px 20px 20px;
     margin-bottom: 50px;
     padding-bottom: 10px;
     box-shadow: 5px 5px 10px rgba(250, 250, 250, 0.29);
@@ -121,6 +127,10 @@ body{
 
 
 }
+.tempo-juntos .text p{
+    font-family:'Poppins',sans-serif ;
+   
+}
 .text{
    padding: 20px;
 }
@@ -141,14 +151,25 @@ body{
     background-color: rgb(40, 40, 40);
     
 }
+#dias,#horas,#minutos,#segundos{
+    animation: aumentarLetra 1s linear infinite;
+}
+@keyframes aumentarLetra{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+}
 .tempo1 p {
-    background-color: rgba(128, 128, 128, 0.471);
+    background-image: linear-gradient(to top, black,black, rgba(149, 125, 67, 0.464),black,black);
     padding: 20px;
     border-radius: 10px;
 
     width: 90px;
     height: 60px;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.693);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.626);
     text-shadow: 
     1px 1px black,
     -1px -1px black,
@@ -169,7 +190,7 @@ body{
 }
 
 .mensagem{
-    width: 85%;
+    width: 250px;
     height: 250px;
     background-image: linear-gradient(to bottom, red, black);
     font-size: 1.7em;
@@ -192,13 +213,30 @@ body{
     color: rgba(255, 255, 255, 0.551);
 }
 .mensagem button{
-    padding: 5px;
-    border-radius: 30px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    animation: aumentar 2s linear infinite;
+    font-variant: small-caps;
+    box-shadow: 0px 0px 10px  white;
 }
+@keyframes aumentar {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
 
 .momentos{
     position: relative;
-    width: 75%;
+    width: 300px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.504);
     background-image: url(../img/momentos.png);
@@ -208,9 +246,14 @@ body{
     margin-bottom: 100px;
 }
 .momentos button{
+    font-variant: small-caps;
+    font-weight: bolder;
     position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translate(-50%);
     padding: 10px;
+    border: 2px solid red;
+    animation: aumentar 2s linear infinite;
+    box-shadow: 0px 0px 10px  white;
 }
