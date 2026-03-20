@@ -54,7 +54,7 @@ const segundos = document.querySelector('#segundos');
 
 function tempoDeNamoro(){
     const dataAtual = new Date();
-    const dataInicial = new Date(2024,4,22) // Data do inicio do namoro
+    const dataInicial = new Date(2025,8,21) // Data do inicio do namoro
 
     const calcularTempo = dataAtual - dataInicial
 
