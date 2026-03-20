@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.interface{
+    padding: 8px;
+    background-color: white;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.interface .top{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.092);
+}
+.interface .top img{
+    width: 130px;
+}
+.interface .foto{
+    background-image: url('../img/m-img1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+;
+    width:100% ;
+    height: 300px;
+}
+.interface .curtidas{
+    display: flex;
+    justify-content: space-between;
+}
+.interface .curtidas .curt{
+    display: flex;
+    gap: 15px;
+}
+.interface .curtidas .curt div{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.interface .curtidas .curt div p{
+   font-size: 1.1em;
+   font-weight: bold;
+    align-self: center;
+}
+
+.interface .seguidores{
+    display: flex;
+    gap: 10px;
+}
+.interface .seguidores img{
+    width: 25px;
+}
+.interface .seguidores p{
+    align-self: center;
+}
+.interface .bottom{
+   margin-top: auto;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+.prev{
+    background-color: rgb(249, 19, 19);
+    color: white;
+    position: relative;
+     top: 15px;
+    left: 42%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    text-decoration: none;
+   
+    padding: 5px 20px;
+}
