@@ -63,5 +63,28 @@ botoes.forEach((botao) => {
             botoes.forEach(b => b.innerHTML = 'PLAY ▶');
         }
 
-    });
+let autoSlide = setInterval(nextSlide, 7000)
+
+    function nextSlide() {
+        moveSlider('next')
+    }
+
+    // reset quando clicar
+    nextBtn.onclick = function() {
+        moveSlider('next')
+        resetAutoSlide()
+    }
+
+    prevBtn.onclick = function() {
+        moveSlider('prev')
+        resetAutoSlide()
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide)
+        autoSlide = setInterval(nextSlide, 7000)
+    }
+
+        });
 });
+

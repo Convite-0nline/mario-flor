@@ -10,37 +10,54 @@
 body{
     width: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     position: relative;
-
-    background-image: linear-gradient(to bottom, brown,black, black);
+    background-image: url('../img/fundo-body.png');
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
+
 .album-musica{
+    background-color: #ffffff37;
+    border-radius: 15px;
+    padding: 15px;
     margin: 10px;
     margin-bottom: 60px;
     
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     height: 500px;
     display: flex;
     flex-direction: column;
+    border: 3px solid rgba(255, 255, 255, 0.245);
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.507);
 }
 .cabecalho{
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: #ffffff;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
     
 }
 .cabecalho div{
     position: relative;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
     padding: 10px;
     transform: rotate(45deg);
     top: -30%;
     box-sizing: border-box;
+    
 }
 .capa{
     background-image: url(../img/foto-musica.jpg);
@@ -54,13 +71,18 @@ body{
 
 .tempo{
     width: 100%;
-    color: white;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
 }
 .nome-musica{
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 0.2em;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
 }
 .botoes{
     display: flex;
@@ -81,155 +103,139 @@ body{
     background: none;
     border: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.382);
+    color: rgba(255, 0, 0, 0.399);
 }
 #btn-play-pause{
-    border: black solid 2px;
+    border: rgba(255, 0, 0, 0.813) solid 2px;
     background: rgb(255, 255, 255);
     font-weight: bolder;
     font-size: 1.1em;
-    color: brown;
+    color: rgb(0, 0, 0);
     overflow: hidden;
 }
 #btn-play-pause:focus{
     outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
+#barra{
+    margin-top: 5px;
+    accent-color: rgb(60, 98, 249);
+    display: block;
+    background-color: rgba(255, 255, 255, 0.51);
+    height: 16px;
+}
+
 /*css do album de musica */
 
 
 .tempo-juntos{
     
-    width: 85%;
+    width: 97%;
     max-width: 600px;
-    height: 550px;
-    background-color: rgb(40, 40, 40);
+    height: 300px;
+    background-color: rgba(40, 40, 40, 0.244);
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 50px;
-    padding-bottom: 10px;
-    box-shadow: 5px 5px 10px rgba(250, 250, 250, 0.29);
-    border: 2px solid black;
+    border: 3px solid rgba(255, 255, 255, 0.381);
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.507);
     
 
 }
 .foto-tempo-junto{
-    background-image: url('../img/foto-tempo.jpg');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px 20px 0 0;
+    
+    flex-basis: 230px;
+    background-color: rgba(255, 0, 0, 0.329);
+    border-radius: 0px 20px 20px 0px;
     width: 100%;
-    height: 350px;
+    height: 100%;
     padding: 10px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
 
 
 }
+.foto-tempo-junto p{
+    color: white;
+    font-size: 1.5em;
+}
+
 .tempo-juntos .text p{
     font-family:'Poppins',sans-serif ;
     font-variant: small-caps;
    
 }
 .text{
-   padding: 20px;
+   padding: 8px;
+}
+.foto-tempo-junto .button{
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to bottom, #f28fcea2,rgba(207, 3, 3, 0.802));
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: normal;
+    border: rgb(255, 255, 255) 1px solid;
+    animation: bordas .5s linear infinite;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+}
+@keyframes bordas {
+    0%{
+        border-top: red 1px solid;
+    }25%{
+        border-right: red 1px solid;
+    }50%{
+        border-bottom: red 1px solid;
+    }75%{
+        border-left: red 1px solid;
+    }
 }
 .tempo-junto{
     
      
     width: 100%;
     color: white;
+    padding: 4px;
     
    
 
 
 }
-.tempo1{
+.tempo-min{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
-    text-align: center;
-    background-color: rgb(40, 40, 40);
+    gap: 5px;
+}
+.tempo-min p{
+    flex: 0 0 60px;
     
+   background-image: linear-gradient(to top, #4c0047a5, #c9184a3c,#6f006874); 
+   padding: 5px;
+   border-radius: 10px;
+   text-align: center;
+   animation: aumentarLetra 2s linear infinite;
+   
 }
-#dias,#horas,#minutos,#segundos{
-    animation: aumentarLetra 1s linear infinite;
-}
+
 @keyframes aumentarLetra{
     0%,100%{
         transform: scale(1);
     }
     50%{
-        transform: scale(1.4);
+        transform: scale(1.05);
     }
 }
-.tempo1 p {
-    background-image: linear-gradient(to top, black,black, rgba(149, 125, 67, 0.464),black,black);
-    padding: 20px;
-    border-radius: 10px;
-
-    width: 90px;
-    height: 60px;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.626);
-    text-shadow: 
-    1px 1px black,
-    -1px -1px black,
-    1px -1px black,
-    -1px 1px black
-    ;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.item {
-    margin-top: 30px;
-    width: 50%;    
-   
-}
-
-.mensagem{
-    width: 250px;
-    height: 250px;
-    background-image: linear-gradient(to bottom, red, black);
-    font-size: 1.7em;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 30px;
-    overflow-x: hidden;
-
-    padding: 10px;
-    margin-bottom: 50px;
-    box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.405);
-
-}
-.mensagem h2{
-    font-size: 0.6em;
-    color: rgba(255, 255, 255, 0.551);
-}
-.mensagem button{
-    padding: 5px 10px;
-    border-radius: 10px;
-    animation: aumentar 2s linear infinite;
-    font-variant: small-caps;
-    box-shadow: 0px 0px 10px  white;
-}
-@keyframes aumentar {
-    0%,100%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-    }
-}
-
 
 
 
@@ -237,25 +243,81 @@ body{
 
 
 .momentos{
+    
     position: relative;
-    width: 300px;
-    height: 250px;
-    background-color: rgba(255, 255, 255, 0.504);
-    background-image: url(../img/momentos.png);
+    width: 90%;
+    max-width: 600px;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+
+}
+.momentos .img{
+    position: relative;
+    width: 350px;
+    opacity: 0.6;
+}
+
+.momentos .momentosfoto{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 100%;
 }
 .momentos button{
-    font-variant: small-caps;
-    font-weight: bolder;
     position: absolute;
-    bottom: 50px;
     left: 50%;
     transform: translate(-50%);
-    padding: 10px;
-    border: 2px solid red;
-    animation: aumentar 2s linear infinite;
-    box-shadow: 0px 0px 10px  white;
+    bottom: 60px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 20px;
+
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to bottom, #ffffffa2,rgba(207, 3, 3, 0.382));
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: normal;
+    border: rgb(255, 255, 255) 1px solid;
+    animation: bordas .5s linear infinite;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+    
 }
+
+
+.roda-pe{
+            background-image: linear-gradient(to right,#003324,#00513b,#003324);
+            position: relative;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 5px 10px 10px;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .roda-pe img{
+            width: 100px;
+        }
+
+        .roda-pe p{
+            color: white;
+        }
+        .roda-pe .links{
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .roda-pe .links a{
+            text-decoration: none;
+            color: white;
+        }

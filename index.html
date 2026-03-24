@@ -59,7 +59,7 @@
             overflow: hidden;
         }
 
-        main a{
+        main #corpo a{
             position: absolute;
             color: white;
             background-color: rgba(11, 44, 255, 0.85);
@@ -113,8 +113,7 @@
                 opacity: 0.8;
             }
         }
-
-        .roda-pe{
+.roda-pe{
             background-image: linear-gradient(to right,#003324,#00513b,#003324);
             position: absolute;
             bottom: 0;
@@ -132,6 +131,15 @@
         }
 
         .roda-pe p{
+            color: white;
+        }
+        .roda-pe .links{
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .roda-pe .links a{
+            text-decoration: none;
             color: white;
         }
     </style>
@@ -152,13 +160,13 @@
             <a href="page/inicio.html"><span class="saltar">💐 Abrir</span></a>
         </div>
 
-        <div class="roda-pe">
+            <div class="roda-pe">
             <img src="img/logo-maria-flor.png" alt="img roda pe">
-            <p>
-                📍 Turilândia-MA<br>
-                💐 Cestas | Floricultura (flores naturais)<br>
-                📲 98 983071338 (Das 8h às 18h)<br>
-                👇🏻 Catálogo Digital e WhatsApp
+            <div class="links">
+                <a href="https://maps.app.goo.gl/zRUaDRsfHsEfCUSV9" target="_blank">📍 Turilândia-MA</a>
+                <p>💐 Cestas | Floricultura (flores naturais)</p>
+                <a href="https://wa.me/5598983071338?text=Ol%C3%A1,%20tudo%20bem" target="_blank">📲 98 983071338 (Das 8h às 18h)</a>
+                <a href="https://wa.me/c/559883071338" target="_blank">👇🏻 Catálogo Digital WhatsApp</a>
             </p>
         </div>
     </main>
