@@ -61,7 +61,7 @@ body{
 }
 .capa{
     background-image: url(../img/foto-musica.jpg);
-    background-position: left center;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 6px;
